@@ -9,29 +9,34 @@ public enum direction { Left, Right };
 [CreateAssetMenu(fileName = "NewChatBubble", menuName = "Chat Bubble")]
 public class ChatBubble : ScriptableObject
 {
-    
-
-    [SerializeField] string Text;
+    [TextArea(3,5)]
+    [SerializeField] string text;
     [SerializeField] int fontSize = 80;
-    [SerializeField] float Duration;
-    [SerializeField] bool Shake;
+    [SerializeField] float duration;
+    [SerializeField] float ScaleX = 1;
+    [SerializeField] float ScaleY = 1;
+    [SerializeField] bool shake;
 
-    [SerializeField] direction TailDirection;
+    [SerializeField] direction tailDirection;
+    [SerializeField] TMPro.FontStyles fontStyle;
     [SerializeField] Color Color = Color.black;
 
-    [SerializeField] Sprite Shape;
-    [SerializeField] AudioClip SFX;
-    [SerializeField] TMP_FontAsset Font;
+    [SerializeField] Sprite shape;
+    [SerializeField] AudioClip sFX;
+    [SerializeField] TMP_FontAsset font;
     
 
     /* Getters */
-    public string GetText => Text;
+    public string GetText => text;
     public int GetFontSize => fontSize;
-    public float GetDuration => Duration;
-    public bool GetShake => Shake;
-    public direction GetDirection => TailDirection;
+    public float GetDuration => duration;
+    public float GetScaleX => ScaleX;
+    public float GetScaleY => ScaleY;
+    public bool GetShake => shake;
+    public direction GetDirection => tailDirection;
+    public TMPro.FontStyles GetFontStyle => fontStyle;
     public Color GetColor => Color;
-    public Sprite GetShape => Shape;
-    public AudioClip GetSFX => SFX;
-    public TMP_FontAsset GetFont => Font;
+    public Sprite GetShape => shape;
+    public AudioClip GetSFX => sFX;
+    public TMP_FontAsset GetFont => font;
 }
