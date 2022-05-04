@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ChatBubbleManager : MonoBehaviour
 {
-    [SerializeField] ChatBubbleDisplay chatBubbleDisplay = null;
+    /*[SerializeField] ChatBubbleDisplay chatBubbleDisplay = null;
 
     private Queue<ChatBubble> bubbleQueue;
 
@@ -36,11 +36,11 @@ public class ChatBubbleManager : MonoBehaviour
         }
 
         ChatBubble _chatBubble = bubbleQueue.Dequeue();
-        chatBubbleDisplay.SetActiveBubble(_chatBubble);
+        chatBubbleDisplay.AssignBubble(_chatBubble);
     }
 
     public void EndChat()
     {
         Debug.Log("End of chat.");
-    }
+    }*/
 }

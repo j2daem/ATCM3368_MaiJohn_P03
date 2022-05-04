@@ -15,7 +15,14 @@ public class ChatBubbleDisplay : MonoBehaviour
     [SerializeField] AudioSource bubbleSFX;
     [SerializeField] Animator bubbleAnimator;
 
-    public void AssignBubble()
+    bool startedChat = false;
+
+    public void AssignBubble(ChatBubble _chatBubble)
+    {
+        chatBubble = _chatBubble;
+    }
+
+    public void AssignBubbleValues()
     {
         /* Text properties */
         bubbleText.text = chatBubble.GetText;
@@ -25,6 +32,11 @@ public class ChatBubbleDisplay : MonoBehaviour
             bubbleText.font = chatBubble.GetFont;
         }
         
+        if (chatBubble.GetDirection == direction.Right)
+        {
+            bubbleScale.localScale = new Vector3(-1, 1, 1);
+        }
+
         bubbleText.fontStyle = chatBubble.GetFontStyle;
         bubbleText.fontSize = chatBubble.GetFontSize;
         bubbleText.color = chatBubble.GetColor;
@@ -44,6 +56,11 @@ public class ChatBubbleDisplay : MonoBehaviour
         if (chatBubble.GetShake)
         {
             bubbleAnimator.SetBool("shake", true);
+        }
+
+        else
+        {
+            bubbleAnimator.SetBool("shake", false);
         }
 
         yield return new WaitForSeconds(chatBubble.GetDuration);

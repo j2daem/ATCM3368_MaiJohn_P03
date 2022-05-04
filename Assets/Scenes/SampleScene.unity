@@ -824,7 +824,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chatBubbleDisplay: {fileID: 386807218}
-  chatBubbleList: []
+  chatBubbleManager: {fileID: 1781642903}
+  chatBubbleList:
+  - {fileID: 11400000, guid: 9e9beb4df5fe6db499219ad5c1597525, type: 2}
+  - {fileID: 11400000, guid: 42199a3fe47a15a469707d4ffaa0d802, type: 2}
+  - {fileID: 11400000, guid: 8f92159501090d24494ccfd6f4bdb9f8, type: 2}
+  - {fileID: 11400000, guid: 507fd2dfd83087f4aa560db1878bc062, type: 2}
+  - {fileID: 11400000, guid: 7c48c829462ce254d88efaaaebb1165f, type: 2}
+  - {fileID: 11400000, guid: be565e84590fe5b428e9359c0d359e76, type: 2}
+  - {fileID: 11400000, guid: 2e74e6224fc707c46b655d47ba072434, type: 2}
 --- !u!114 &1781642903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -837,6 +845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006941dbb86842b4ba2757412bb6e8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chatBubbleDisplay: {fileID: 386807218}
 --- !u!4 &1781642904
 Transform:
   m_ObjectHideFlags: 0
