@@ -9,17 +9,18 @@ public class ChatBubbleDisplay : MonoBehaviour
 {
     [SerializeField] ChatBubble chatBubble;
 
+    [SerializeField] Transform target;
     [SerializeField] Transform bubbleScale;
+    [SerializeField] Transform direction;
     [SerializeField] TextMeshProUGUI bubbleText;
     [SerializeField] Image bubbleShape;
     [SerializeField] AudioSource bubbleSFX;
     [SerializeField] Animator bubbleAnimator;
 
-    bool startedChat = false;
-
     public void AssignBubble(ChatBubble _chatBubble)
     {
         chatBubble = _chatBubble;
+
     }
 
     public void AssignBubbleValues()
@@ -31,15 +32,23 @@ public class ChatBubbleDisplay : MonoBehaviour
         {
             bubbleText.font = chatBubble.GetFont;
         }
-        
-        if (chatBubble.GetDirection == direction.Right)
+
+        Vector2 newPosition = target.localPosition;
+
+        newPosition.x = chatBubble.GetPosX;
+        newPosition.y = chatBubble.GetPosY;
+
+        gameObject.transform.parent.transform.localPosition = newPosition;
+
+        if (chatBubble.GetDirection == Direction.Right)
         {
-            bubbleScale.localScale = new Vector3(-1, 1, 1);
+            bubbleScale.localScale *= -1;
         }
 
         bubbleText.fontStyle = chatBubble.GetFontStyle;
         bubbleText.fontSize = chatBubble.GetFontSize;
         bubbleText.color = chatBubble.GetColor;
+
         bubbleScale.localScale = new Vector3(chatBubble.GetScaleX, chatBubble.GetScaleY, 1);
 
         bubbleShape.sprite = chatBubble.GetShape;

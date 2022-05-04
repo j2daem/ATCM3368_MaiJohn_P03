@@ -15,9 +15,11 @@ MonoBehaviour:
   text: Oof!
   fontSize: 150
   duration: 1
+  PosX: 0
+  PosY: 0
   ScaleX: 1
   ScaleY: 1
-  shake: 1
+  shake: 0
   tailDirection: 0
   fontStyle: 0
   Color: {r: 0, g: 0, b: 0, a: 1}

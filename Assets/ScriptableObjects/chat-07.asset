@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: Hold it!
   fontSize: 150
-  duration: 1
+  duration: 1.5
   ScaleX: 1
   ScaleY: 1
   shake: 1

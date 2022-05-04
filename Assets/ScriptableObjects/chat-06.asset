@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: '!'
   fontSize: 175
-  duration: 1
+  duration: 0.75
   ScaleX: 0.5
   ScaleY: 0.5
   shake: 0
